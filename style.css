@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --primary-king-blue: #0d263b;
+  --primary-white: #ffffff;
+  --primary-blue: #0061df;
+  --primary-gray: #696969;
+
+  /* fonts */
+  --font-family-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--font-family-montserrat);
+}
+
+/* ----------------------- Typography start ----------------------- */
+h1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: var(--primary-white);
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: var(--primary-king-blue);
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--primary-king-blue);
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: var(--primary-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  h4 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  p {
+    line-height: 20px;
+  }
+}
+/* ----------------------- Typography end ----------------------- */
+
+.container {
+  max-width: 1440px;
+  padding: 0px 130px;
+  margin: 0 auto;
+  /* background-color: red;<input type="text" placeholder="Search...." /> */
+}
+
+@media only screen and (max-width: 1440px) {
+  .container {
+    padding: 0 6%;
+  }
+}
+
+/* ----------------------- header start ----------------------- */
+header {
+  background-color: var(--primary-king-blue);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+header nav .hamburger-menu {
+  display: none;
+}
+
+header nav .list {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+header nav .list .list__item .list__link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--primary-white);
+}
+
+@media only screen and (max-width: 768px) {
+  header nav .list {
+    display: none;
+  }
+
+  header nav .hamburger-menu {
+    display: block;
+  }
+
+  header nav .logo {
+    width: 100px;
+  }
+}
+/* ----------------------- header end ----------------------- */
+
+/* ----------------------- settings section start ----------------------- */
+#settings .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  height: 64px;
+}
+
+#settings .wrapper .search-input__wrapper {
+  position: relative;
+  height: 44px;
+  flex-grow: 1;
+}
+
+#settings .wrapper .search-input__wrapper input {
+  width: 100%;
+  height: 44px;
+  border-radius: 2px;
+  padding-left: 44px;
+  padding-right: 20px;
+
+  border: 1px solid #e6e9ec;
+}
+
+#settings .wrapper .search-input__wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+
+  transform: translateY(-50%);
+}
+
+#settings .wrapper .box {
+  width: 131px;
+  height: 44px;
+  border: 1px solid #e6e9ec;
+  border-radius: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+#settings .wrapper .box span {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--primary-king-blue);
+}
+
+#settings .wrapper button {
+  width: 180px;
+  height: 44px;
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+#settings .wrapper button span {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--primary-white);
+}
+
+@media only screen and (max-width: 1050px) {
+  #settings {
+    display: none;
+  }
+}
+
+/* ----------------------- settings section end ----------------------- */
+
+/* ----------------------- intro section start ----------------------- */
+#intro {
+  height: calc(100vh - 128px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(./assets/images/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#intro .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: calc(100vh - 128px);
+}
+
+#intro .wrapper p {
+}
+
+#intro .settings {
+  display: none;
+}
+
+#intro .wrapper .tools {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 18px;
+  grid-row-gap: 0px;
+}
+
+#intro .wrapper .tools .tools__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4px;
+}
+
+#intro .wrapper .tools .tools__item img {
+  width: 19px;
+}
+
+#intro .wrapper .tools .tools__item span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--primary-white);
+}
+
+@media only screen and (max-width: 1050px) {
+  #intro {
+    height: calc(100vh - 64px);
+  }
+
+  #intro .settings {
+    display: flex;
+    margin-top: 50px;
+    color: white;
+  }
+}
+/* ----------------------- settings section end ----------------------- */
